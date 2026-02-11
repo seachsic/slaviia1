@@ -1,0 +1,77 @@
+.vector {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  padding: 0 15px;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition-property: visibility, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 768px) {
+    padding: 0;
+  }
+
+  &__btn {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--light-txt-clr);
+  }
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  &__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    background-color: var(--light-txt-clr);
+    padding: 40px;
+    min-width: 450px;
+
+    @media screen and (min-width: 1200px) {
+      max-width: 528px;
+    }
+  }
+}
+
+.vector__btn:hover .svg__vector {
+  fill: var(--main-clr);
+}
+
+.svg__vector {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.svg__vector:hover,
+.svg__vector:focus {
+  fill: var(--main-clr);
+}
+
+.check__span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  user-select: none;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
+}

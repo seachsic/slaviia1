@@ -1,0 +1,108 @@
+.team {
+  background-color: var(--light-grey-clr);
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
+}
+
+.person__container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: block;
+}
+
+.person__list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.person__team {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--dark-txt-clr);
+  margin-bottom: 50px;
+}
+
+.person__text {
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 30px) / 2);
+    max-width: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 270px;
+  }
+}
+
+.social {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 10px;
+  margin-top: 16px;
+
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--dark-txt-clr);
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.18;
+
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--grey-txt-clr);
+  }
+
+  &__container {
+    padding: 30px 0;
+  }
+
+  &__link {
+    width: 44px;
+    height: 44px;
+    background-color: var(--light-txt-clr);
+    border-radius: 50%;
+    fill: var(--icon-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition-property: background-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    background-color: var(--main-clr);
+    fill: var(--light-txt-clr);
+  }
+}

@@ -1,0 +1,182 @@
+.modal {
+  width: 100%;
+}
+
+.form__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--dark-txt-clr);
+  margin-bottom: 12px;
+}
+
+.textarea__text {
+  width: 100%;
+  height: 138px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+  outline: transparent;
+  resize: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  margin-bottom: 20px;
+}
+
+.textarea__text::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.textarea__text:hover,
+.textarea__text:focus {
+  border: 1px solid var(--main-clr);
+}
+
+.modal__label {
+  position: relative;
+  display: flex;
+  margin-bottom: 10px;
+  width: 100%;
+  flex-direction: column;
+}
+
+input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  cursor: text;
+  padding: 0 42px;
+  outline: transparent;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__label:hover,
+.modal__label:focus {
+  color: var(--main-clr);
+  fill: var(--main-clr);
+}
+
+.field:hover,
+.field:focus {
+  border: 1px solid var(--main-clr);
+  color: var(--main-clr);
+}
+
+.modal__name {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 4px;
+  letter-spacing: 0.01em;
+  display: block;
+
+  color: var(--grey-txt-clr);
+}
+
+.modal__span {
+  position: relative;
+  width: 100%;
+}
+
+.svg__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.field:focus ~ .svg__icon {
+  fill: var(--main-clr);
+}
+
+.check:checked + .svg__check .icon-unchecked {
+  opacity: 1;
+}
+
+.check:checked + .svg__check .icon-checked {
+  opacity: 0;
+}
+
+.icon-checked {
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-unchecked {
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.check__span {
+  position: relative;
+  left: 60px;
+  display: contents;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+
+  letter-spacing: 0.03em;
+
+  color: var(--grey-txt-clr);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
+}
+
+.svg__check {
+  outline: transparent;
+  height: 15px;
+}
+
+.label__check {
+  display: block;
+  margin-bottom: 30px;
+  position: relative;
+  gap: 7px;
+  text-align: center;
+}
+
+.treaty__link {
+  color: var(--main-clr);
+  width: 100%;
+}
+
+.check__btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  color: var(--light-txt-clr);
+  background-color: var(--main-clr);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 32px;
+  border: transparent;
+  margin: 0 auto;
+  width: 200px;
+  flex-direction: column;
+  display: block;
+}
+
+.check__btn:hover {
+  background-color: var(--btn-clr);
+}
