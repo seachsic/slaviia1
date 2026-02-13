@@ -65,14 +65,7 @@
     margin: 0 auto 30px;
     display: flex;
 
-    @media screen and (min-width: 768px) {
-      max-width: 360px;
-    }
-
-    @media screen and (min-width: 1200px) {
-      font-size: 44px;
-      max-width: 696px;
-    }
+    
   }
 
   &__btn {
